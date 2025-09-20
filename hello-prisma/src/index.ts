@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
+    // create data/insert data
   // const result = await prisma.user.create({
   //     data: {
   //         name: "abdullah",
@@ -10,7 +11,7 @@ async function main() {
   // })
   // console.log(result);
 
-  // get all user data
+  // retrieve all user data
   const userData = await prisma.user.findMany();
   console.log(userData);
 
@@ -29,6 +30,7 @@ async function main() {
   // });
   // console.log(findUserById);
 
+  // single data retrive by id
   // const findUserById = await prisma.user.findUniqueOrThrow({
   //     where: {
   //         id: 5
